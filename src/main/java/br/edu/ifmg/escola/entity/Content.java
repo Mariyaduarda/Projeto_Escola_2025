@@ -14,7 +14,6 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tb_content")
 public class Content extends Lesson{
 
     private String tea;

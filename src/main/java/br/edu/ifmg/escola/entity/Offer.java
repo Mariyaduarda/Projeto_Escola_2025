@@ -1,6 +1,5 @@
 package br.edu.ifmg.escola.entity;
 
-import br.edu.ifmg.escola.resource.Resource;
 import jakarta.persistence.*;
 import lombok.*;
 

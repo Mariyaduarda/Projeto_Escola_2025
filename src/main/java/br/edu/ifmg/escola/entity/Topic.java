@@ -30,12 +30,6 @@ public class Topic {
     @JoinColumn(name = "author_id")
     private User author;
 
-    @ManyToMany
-    @JoinTable(name = "tb_topic_likes"),
-        joinColumns = @JoinColumn(name = "topic_id"),
-        inverseJoinColumns = @JoinColumn(name = "user_id")
-    private Set<User> likes = new HashSet<>();
-
     @ManyToOne
     @JoinColumn(name = "offer_id")
     private Offer offer;
@@ -46,4 +40,13 @@ public class Topic {
 
     @OneToMany//(mappedBy = "topic")
     private Set<Reply> replies = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+        name = "tb_topic_likes",
+        joinColumns = @JoinColumn(name = "topic_id"),
+        inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private Set<User> likes = new HashSet<>();
+
 }

@@ -4,9 +4,8 @@ import br.edu.ifmg.escola.resource.Resource;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.Instant;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.*;
+import java.util.*;
 
 @Data
 @Getter
@@ -34,4 +33,8 @@ public class Offer {
 
     @OneToMany(mappedBy = "offer")
     private List<Resource> resources = new ArrayList<>();
+
+    @OneToMany(mappedBy = "offer")
+    private List<Topic> topics = new ArrayList<>();
+
 }

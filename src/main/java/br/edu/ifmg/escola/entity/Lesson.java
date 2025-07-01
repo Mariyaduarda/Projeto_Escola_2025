@@ -3,6 +3,7 @@ package br.edu.ifmg.escola.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import javax.lang.model.element.Element;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,5 +29,7 @@ public abstract class Lesson {
     @ManyToMany(mappedBy = "lesson")
     @JoinColumn(name = "section_id")
     private Section section;
+
+    private Element<>
 
 }
